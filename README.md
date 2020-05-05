@@ -27,9 +27,10 @@ Things you may want to cover:
 ## users table
 |Column|Type|Options|
 |------|----|-------|
-|name|string|index: true, null: false, unique: true|
-|mail|string|null: falese|
+|name|string|index: true, null: false|
+|mail|string|null: false, unique: true|
 |password|string|null: false|
+|groups_users_id|integer|null: false, foreign_key: true|
 
 ### Association
 - has_many :groups, through: groups_users
@@ -39,17 +40,17 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|member|string||
-|user_id|integer|null: false, foreign_key: true|
+|groups_users_id|null: false, foreign_key: true|
+|groups_messages_id|integer|null: false, foreign_key: true|
 
 ### Association
 - has_many :users, through: :groups_users
-- has_many :messages
+- has_many :messages, through: :groups_messages
 
 ## messages table
 |Column|Type|Options|
 |------|----|-------|
-|message|string||
+|message|string|null: false|
 |image|string||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
@@ -67,3 +68,13 @@ Things you may want to cover:
 ### Association
 - belongs_to :group
 - belongs_to :user
+
+## groups_messages table
+|Column|Type|Options|
+|------|----|-------|
+|group_id|integer|null: false, foreing_key: true|
+|message_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :group
+- belongs_to :message
