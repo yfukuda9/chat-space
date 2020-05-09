@@ -1,0 +1,39 @@
+.main_chat
+  .header
+    .contents
+      .group
+        .name
+          neko
+        .member
+          Member：テスト
+      .edit
+        .btn
+          = link_to "Edit", "#"
+
+  .list
+    .post
+      .top
+        .name
+          テスト
+        .date
+          2020/01/01(Fri) 12:12:12
+      .comment
+        test
+      .post
+      .top
+        .name
+          テスト2
+        .date
+          2020/01/02(Fri) 12:12:12
+      .comment
+        test2
+
+
+  .form
+    %form.new_message
+      .inputbox 
+        %input{type: "text", class: "inputbox_text", placeholder: "type a message"}
+        %label{class: "inputbox_img"}
+          =icon("fas", "image")
+          %input{type: "file", class: "inputbox_img_file"}
+      %input{type: "submit", class: "submit_btn", value: "Send"}
