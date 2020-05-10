@@ -1,33 +1,24 @@
 .main_chat
-  .header
-    .contents
-      .group
-        .name
+  .main_chat__header
+    .main_chat__header__contents
+      .main_chat__header__contents__group
+        .main_chat__header__contents__group__name
           neko
-        .member
+        .main_chat__header__contents__group__member
           Member：テスト
-      .edit
-        .btn
+      .main_chat__header__contents__edit
+        .main_chat__header__contents__edit__btn
           = link_to "Edit", "#"
 
-  .list
-    .post
-      .top
-        .name
+  .main_chat__list
+    .main_chat__list__post
+      .main_chat__list__post__top
+        .main_chat__list__post__top__name
           テスト
-        .date
+        .main_chat__list__post__top__date
           2020/01/01(Fri) 12:12:12
-      .comment
+      .main_chat__list__post__comment
         test
-      .post
-      .top
-        .name
-          テスト2
-        .date
-          2020/01/02(Fri) 12:12:12
-      .comment
-        test2
-
 
   .form
     %form.new_message
