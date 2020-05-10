@@ -5,29 +5,29 @@ $section-color: #38aef0;
   width: calc(100vw - 300px);
   background-color: #fff;
   float: right;
-  .header {
+  &__header {
     height: 100px;
     border-bottom: solid 1px #eee;
-      .contents {
+      &__contents {
         display: flex;
         justify-content: space-between;
-        .group {
+        &__group {
           margin: 40px 0 0 40px;
-          .name {
+          &__name {
             color: #333;
             font-size: 20px;
             line-height: 20px;
             padding-bottom: 20px;
           }
-          .member {
+          &__member {
             height: 25px;
             color: #999;
             font-size: 12px;
           }
         }
-        .edit {
+        &__edit {
             padding: 30px 40px 0 0;
-          .btn {
+          &__btn {
             height: 40px;
             width: 73px;
             font-size: 16px;
@@ -36,34 +36,34 @@ $section-color: #38aef0;
             padding: 0 20px;
             a {
               text-decoration: none;
-              color: #$section-color;
+              color: $section-color;
             }
           }
         }
       }
   }
 
-  .list {
+  &__list {
     height: calc(100vh - 100px - 90px);
     background-color: #fafafa;
     padding: 46px 0 0 40px;
-    .post {
+    &__post {
       padding-bottom: 40px;
-      .top {
+      &__top {
         display: flex;
         margin-bottom: 10px;
-        .name {
+        &__name {
           color: #333;
           font-size: 16px;
           font-weight: bold;
           padding-right: 10px;
         }
-        .date {
+        &__date {
           color: #999;
           font-size: 12px;
         }
       }
-      .comment {
+      &__comment {
         color: #434A54;
         font-size: 14px;
         margin-bottom: 10px;
@@ -104,7 +104,7 @@ $section-color: #38aef0;
         width: 100px;
         margin-left: 15px;
         font-size: 15px;
-        background-color: $section-color0;
+        background-color: $section-color;
         padding: 0 30px;
         color: #fff;
       }

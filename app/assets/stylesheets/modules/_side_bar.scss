@@ -3,22 +3,22 @@
   width: 300px;
   background-color: #253141;
   float: left;
-  .header {
+  &__header {
    height: 100px;
    padding: 40px 20px;
-    .menu {
+    &__menu {
       height: 20px;
       width: 260px;
       display: flex;
       justify-content: space-between;
       line-height: 20px;
-        .user_name {
+        &__UserName {
           width: 200px;
           font-size: 16px;
           color: #fff;
           font-weight: bold;
         }
-        .icons {
+        &__icons {
           width: 60px;
           text-align: right;
           a {
@@ -32,19 +32,19 @@
     }
   }
 
-  .group_list {
+  &__GroupList {
     height: calc(100vh - 100px);
     background-color: #2f3e51;
     color: #fff;
     box-sizing: border-box;
     padding: 20px 20px 0 20px;
-    .contents {
+    &__contents {
       padding-bottom: 40px;
-      .group_name {
+      &__GroupName {
         font-size: 15px;
         margin-bottom: 5px;
       }
-      .new_message {
+      &__NewMessage {
         font-size: 11px;
       }  
     }
