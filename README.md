@@ -28,7 +28,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name|string|index: true, null: false|
-|mail|string|null: false, unique: true|
+|email|string|null: false, unique: true|
 |password|string|null: false|
 
 ### Association
