@@ -3,28 +3,24 @@
     .main_chat__header__contents
       .main_chat__header__contents__group
         .main_chat__header__contents__group__name
-          neko
+          = @group.name
         .main_chat__header__contents__group__member
-          Member：テスト
+          = "Member：#{@group.users.pluck(:name).join(" ")}"
       .main_chat__header__contents__edit
         .main_chat__header__contents__edit__btn
-          = link_to "Edit", "#"
+          = link_to("Edit", edit_group_path(@group)) 
+
 
   .main_chat__list
-    .main_chat__list__post
-      .main_chat__list__post__top
-        .main_chat__list__post__top__name
-          テスト
-        .main_chat__list__post__top__date
-          2020/01/01(Fri) 12:12:12
-      .main_chat__list__post__comment
-        test
+    = render @messages
+   
 
   .form
-    %form.new_message
-      .inputbox 
-        %input{type: "text", class: "inputbox_text", placeholder: "type a message"}
-        %label{class: "inputbox_img"}
-          =icon("fas", "image")
-          %input{type: "file", class: "inputbox_img_file"}
-      %input{type: "submit", class: "submit_btn", value: "Send"}
+    = form_for [@group, @message] do |f|
+      .inputbox
+        = f.text_field :content, class: 'message', placeholder: 'type a message'
+        = f.label :image, class: 'image' do
+          = icon('fas', 'image', class: 'image_icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'submit_btn'
+  

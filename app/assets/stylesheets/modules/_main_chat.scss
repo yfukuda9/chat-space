@@ -47,6 +47,7 @@ $section-color: #38aef0;
     height: calc(100vh - 100px - 90px);
     background-color: #fafafa;
     padding: 46px 0 0 40px;
+    overflow: scroll;
     &__post {
       padding-bottom: 40px;
       &__top {
@@ -82,23 +83,28 @@ $section-color: #38aef0;
         background-color: #fff;
         display: flex;
         position: relative;
-        &_text {
-          height: 50px;
-          width: 100%;
-          position: absolute;
-          padding: 0 40px 0 10px;
-          border: none;
-        }
-        &_img {
-          position: absolute;
-          top: 8px;
-          right: 10px;
-          font-size: 1.5rem;
-          &_file {
-            display: none;
+          .message {
+            height: 50px;
+            width: 100%;
+            position: absolute;
+            padding: 0 40px 0 10px;
+            border: none;
           }
-        }
+          .image {
+            position: absolute;
+            top: 12px;
+            right: 10px;
+            
+            &_icon {
+              font-size: 1.5rem;
+            }
+            .hidden {
+              display: none;
+            }
+          }
       }
+        
+    
       .submit_btn {
         height: 50px;
         width: 100px;
